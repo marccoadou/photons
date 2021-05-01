@@ -1,0 +1,69 @@
+@import "~bootstrap/scss/bootstrap";
+
+$-default-color: #506ba5;
+$-accent-color: rgb(56, 56, 173);
+$-small-accent-color: #304063;
+$-arrow-color: rgba(255, 255, 255, 0.5);
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	font-family: "Montserrat", sans-serif;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.title {
+	margin: 2rem 0 1rem 0;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-weight: bold;
+	text-transform: uppercase;
+}
+
+.search-form {
+	input,
+	select,
+	.form-label {
+		margin-top: 1em;
+	}
+	button {
+		width: 100%;
+	}
+}
+a:link {
+	text-decoration: none;
+}
+.card {
+	border: none;
+	text-align: center;
+	&:hover {
+		filter: brightness(1.2);
+	}
+}
+img {
+	object-fit: contain;
+	width: 80vw;
+	// height: 20vh;
+}
+@media only screen and (min-width: 600px) {
+	.gallery-grid {
+		display: grid;
+
+		grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+		grid-auto-rows: auto;
+		gap: 1rem;
+		.card {
+			img {
+				height: 400px;
+				width: 100%;
+				object-fit: cover;
+			}
+		}
+	}
+}
